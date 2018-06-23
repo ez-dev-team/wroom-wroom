@@ -2,9 +2,10 @@
   "name": "wroom-wroom",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/ez-dev-team/wroom-wroom/issues"
   },
-  "homepage": "https://github.com/ez-dev-team/wroom-wroom#readme"
+  "homepage": "https://github.com/ez-dev-team/wroom-wroom#readme",
+  "devDependencies": {
+    "ts-loader": "4.4.1",
+    "typescript": "2.9.2",
+    "webpack": "4.12.0",
+    "webpack-cli": "3.0.8",
+    "webpack-dev-server": "3.1.4"
+  }
 }

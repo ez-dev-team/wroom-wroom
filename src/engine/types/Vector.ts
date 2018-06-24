@@ -12,9 +12,7 @@ export default class Vector {
 	}
 
 	add(vec:Vector):Vector {
-		this.x += vec.x
-		this.y += vec.y
-		return this
+		return new Vector(this.x + vec.x, this.y + vec.y)
 	}
 
 	dot(vec:Vector):number {
@@ -34,12 +32,14 @@ export default class Vector {
 	}
 
 	subtract(vec:Vector):Vector {
-		this.x -= vec.x
-		this.y -= vec.y
-		return this
+		return new Vector(this.x - vec.x, this.y - vec.y)
 	}
 
-	perp():Vector {
+	left():Vector {
+		return new Vector(-this.y, this.x)
+	}
+
+	right():Vector {
 		return new Vector(this.y, -this.x)
 	}
 }

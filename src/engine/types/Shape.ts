@@ -1,9 +1,13 @@
-import Vector from 'engine/types/vector'
-import Projection from 'engine/types/projection'
+import Vector from 'engine/types/Vector'
+import Projection from 'engine/types/Projection'
 
 export default class Shape {
 
-	private vertices:Vector[] = []
+	vertices:Vector[] = []
+
+	constructor(vertices:Vector[]) {
+		this.vertices = vertices
+	}
 
 	getEdgesNormals():Vector[] {
 		let axes:Vector[] = []
@@ -13,11 +17,9 @@ export default class Shape {
 			// get the next vertex
 			let p2 = this.vertices[i + 1 == this.vertices.length ? 0 : i + 1]
 			// subtract the two to get the edge vector
-			let edge = p1.subtract(p2)
+			let edge = p2.subtract(p1)
 			// get either perpendicular vector
-			let normal = edge.perp()
-			// the perp method is just (x, y) => (-y, x) or (y, -x)
-			axes[i] = normal
+			axes[i] = edge.left()
 		}
 
 		return axes
@@ -25,11 +27,10 @@ export default class Shape {
 
 	getProjection(axis:Vector):Projection {
 		let normalized = axis.asNormalized()
-		let min = normalized.dot(this.vertices[0])
-		let max = min
+		let min = Infinity
+		let max = -Infinity
 
-		for (let i = 1; i < this.vertices.length; i++)
-		{
+		for (let i = 0; i < this.vertices.length; i++) {
 			let dot = normalized.dot(this.vertices[i])
 			if (dot < min) {
 				min = dot

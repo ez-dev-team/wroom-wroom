@@ -18,10 +18,10 @@ export function render(container:HTMLElement) {
 				new Vector(0, 50)
 			].reverse())],
 			[new Shape([
-				new Vector(100, 0),
-				new Vector(130, 0),
-				new Vector(130, 50),
-				new Vector(100, 50)
+				new Vector(0, 0),
+				new Vector(30, 0),
+				new Vector(30, 50),
+				new Vector(0, 50)
 			].reverse())]
 		]
 	}
@@ -80,9 +80,26 @@ export function render(container:HTMLElement) {
 	animate()
 }
 
+let stepsCount = 0
+let negative = false
+
 function stochasticCoordsUpdate(shapes:Shape[]) {
-	let dx = Math.round(Math.random() * STEP_SIZE * (Math.random() > 0.5 ? 1 : -1))
-	let dy = Math.round(Math.random() * STEP_SIZE * (Math.random() > 0.5 ? 1 : -1))
+	let dx = Math.round(Math.random() * STEP_SIZE)
+	let dy = Math.round(Math.random() * STEP_SIZE)
+
+	stepsCount += negative ? -1 : 1
+	if (stepsCount > 10) {
+		negative = true
+		stepsCount = 9
+	}
+	if (stepsCount < 0) {
+		negative = false
+		stepsCount = 1
+	}
+	if (negative) {
+		dx *= -1
+		dy *= -1
+	}
 
 	shapes.forEach(shape => {
 		let vertices:Vector[] = []

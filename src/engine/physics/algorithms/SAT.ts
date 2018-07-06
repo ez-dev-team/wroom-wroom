@@ -41,6 +41,15 @@ export function getMinTranslationVector(shape1:Shape, shape2:Shape):{axis:Vector
 		return null
 	}
 
+	/*// make sure the vector is pointing from shape1 to shape2
+	Vector2 c1 = transform1.getTransformed(convex1.getCenter());
+	Vector2 c2 = transform2.getTransformed(convex2.getCenter());
+	Vector2 cToc = c1.to(c2);
+	if (cToc.dot(n) < 0) {
+		// negate the normal if its not
+		n.negate();
+	}*/
+
 	if (minAxis) {
 		return {axis:minAxis, overlap:minOverlap}
 	} else {

@@ -1,6 +1,7 @@
 import Shape from 'engine/types/Shape'
 import Vector from 'engine/types/Vector'
 import Physics from 'engine/physics/physics'
+import * as GameLoop from 'engine/GameLoop'
 
 const WIDTH = 400
 const HEIGHT = 400
@@ -33,7 +34,7 @@ export function render(container:HTMLElement) {
 
 	let ctx = canvas.getContext('2d')!
 
-	let animate = () => {
+	let render = () => {
 		ctx.clearRect(0, 0, WIDTH, HEIGHT)
 
 		items.shapes.forEach((shapes, idx) => {
@@ -73,11 +74,24 @@ export function render(container:HTMLElement) {
 				ctx.fillText(`${anyIntersections}`,WIDTH - 30,HEIGHT - 30)
 			}
 		}
+	}
 
+	let tick = GameLoop.createTickFunction({
+		start: () => {},
+		end: (fps) => {
+			ctx.font = "10px Arial"
+			ctx.fillText(`FPS: ${fps}`,WIDTH - 50,HEIGHT - 50)
+		},
+		update: () => {},
+		render: () => render()
+	})
+
+	let animate = (elapsed:number) => {
+		tick(elapsed)
 		requestAnimationFrame(animate)
 	}
 
-	animate()
+	requestAnimationFrame(animate)
 }
 
 let stepsCount = 0

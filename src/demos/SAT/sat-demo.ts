@@ -1,6 +1,7 @@
 import Shape from 'engine/types/Shape'
 import Vector from 'engine/types/Vector'
 import Physics from 'engine/physics/physics'
+import * as CanvasRender from 'engine/render/CanvasRender'
 import * as GameLoop from 'engine/GameLoop'
 
 enum KeyboardCodes {
@@ -100,12 +101,8 @@ export function render(container:HTMLElement) {
 		].reverse()))
 	]
 
-	let canvas = document.createElement('canvas')
-	canvas.width = WIDTH
-	canvas.height = HEIGHT
+	let {canvas, ctx} = CanvasRender.createCanvasRender(WIDTH, HEIGHT, WIDTH, HEIGHT)
 	container.appendChild(canvas)
-
-	let ctx = canvas.getContext('2d')!
 
 	let render = () => {
 		ctx.clearRect(0, 0, WIDTH, HEIGHT)

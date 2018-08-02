@@ -1,7 +1,8 @@
 const path = require('path');
 
+// TODO: another entry for touch platform
 module.exports = {
-	entry: './src/demos/index.ts',
+	entry: './src/KeyboardAndMousePlatform.ts',
 	devtool: 'inline-source-map',
 	module: {
 		rules: [

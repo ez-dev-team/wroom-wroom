@@ -2,7 +2,7 @@ import Shape from 'engine/types/Shape'
 import Vector from 'engine/types/Vector'
 import Physics from 'engine/physics/physics'
 import * as Audio from 'engine/audio/Audio'
-import {GameInputButtons} from '../PlatformTypes'
+import {IGameInput} from 'game/GameInput'
 
 class GameObject {
 	constructor(
@@ -11,7 +11,7 @@ class GameObject {
 		public shape:Shape) {
 	}
 
-	update(input:Map<GameInputButtons, boolean>) {
+	update(input:IGameInput) {
 		let dx = 0
 		let dy = 0
 
@@ -19,16 +19,16 @@ class GameObject {
 			return 4 //event.repeat ? 15 : 2 // just to move faster for demo purposes
 		}
 
-		if (input.get(GameInputButtons.LEFT)) {
+		if (input.buttons.LEFT.pressed) {
 			dx -= getStep()
 		}
-		if (input.get(GameInputButtons.UP)) {
+		if (input.buttons.UP.pressed) {
 			dy -= getStep()
 		}
-		if (input.get(GameInputButtons.RIGHT)) {
+		if (input.buttons.RIGHT.pressed) {
 			dx += getStep()
 		}
-		if (input.get(GameInputButtons.DOWN)) {
+		if (input.buttons.DOWN.pressed) {
 			dy += getStep()
 		}
 
@@ -71,7 +71,7 @@ let OBJECTS = [
 	].reverse()))
 ]
 
-export function processInput(input:Map<GameInputButtons, boolean>) {
+export function processInput(input:IGameInput) {
 	let obj = OBJECTS[0]
 	obj.update(input)
 }

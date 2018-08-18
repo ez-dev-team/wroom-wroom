@@ -1,11 +1,8 @@
-import {GameInputButtons} from './PlatformTypes'
 import * as Audio from 'engine/audio/Audio'
 import * as GameLoop from 'engine/GameLoop'
 import * as Game from 'game/Game'
 import * as CanvasRender from 'engine/render/CanvasRender'
-
-const WIDTH = 400
-const HEIGHT = 400
+import {updateButtonState, updateGameInputButtonsState, GAME_INPUT, IGameButtonsEnum} from 'game/GameInput'
 
 enum KeyboardCodes {
 	A = 65,
@@ -17,6 +14,7 @@ enum KeyboardCodes {
 	RIGHT_ARROW = 39,
 	DOWN_ARROW = 40,
 
+	// may be will be needed later
 	ENTER = 13,
 	CTRL = 17,
 	SHIFT = 16,
@@ -24,20 +22,25 @@ enum KeyboardCodes {
 	ESCAPE = 27
 }
 
-const KEYBOARD_TO_GAME_INPUT_MAP = {
-	[KeyboardCodes.A]: GameInputButtons.LEFT,
-	[KeyboardCodes.LEFT_ARROW]: GameInputButtons.LEFT,
-	[KeyboardCodes.W]: GameInputButtons.UP,
-	[KeyboardCodes.UP_ARROW]: GameInputButtons.UP,
-	[KeyboardCodes.D]: GameInputButtons.RIGHT,
-	[KeyboardCodes.RIGHT_ARROW]: GameInputButtons.RIGHT,
-	[KeyboardCodes.S]: GameInputButtons.DOWN,
-	[KeyboardCodes.DOWN_ARROW]: GameInputButtons.DOWN
+const KEYBOARD_INPUT_TO_GAME_BUTTON_MAP = {
+	[KeyboardCodes.A]: IGameButtonsEnum.LEFT,
+	[KeyboardCodes.LEFT_ARROW]: IGameButtonsEnum.LEFT,
+	[KeyboardCodes.W]: IGameButtonsEnum.UP,
+	[KeyboardCodes.UP_ARROW]: IGameButtonsEnum.UP,
+	[KeyboardCodes.D]: IGameButtonsEnum.RIGHT,
+	[KeyboardCodes.RIGHT_ARROW]: IGameButtonsEnum.RIGHT,
+	[KeyboardCodes.S]: IGameButtonsEnum.DOWN,
+	[KeyboardCodes.DOWN_ARROW]: IGameButtonsEnum.DOWN
 }
 
-const KEYBOARD_INPUT_MAP = new Map<GameInputButtons, boolean>()
-
 function listenToKeyboard() {
+	function trySetKeyState(key:number, pressed:boolean) {
+		let gameButton = KEYBOARD_INPUT_TO_GAME_BUTTON_MAP[key]
+		if (gameButton) {
+			updateButtonState(gameButton, pressed)
+		}
+	}
+
 	document.addEventListener('keydown', (event) => {
 		// TODO(kuliapin): prevent only handled events?
 		event.preventDefault()
@@ -45,20 +48,18 @@ function listenToKeyboard() {
 		event.stopImmediatePropagation()
 
 		let key = event.keyCode || event.which
-		let gameButton = KEYBOARD_TO_GAME_INPUT_MAP[key]
-		if (gameButton) {
-			KEYBOARD_INPUT_MAP.set(gameButton, true)
-		}
+		trySetKeyState(key, true)
+		updateGameInputButtonsState() // save pressed state to be used in game tick
 	}, true)
 
 	document.addEventListener('keyup', (event) => {
 		let key = event.keyCode || event.which
-		let gameButton = KEYBOARD_TO_GAME_INPUT_MAP[key]
-		if (gameButton) {
-			KEYBOARD_INPUT_MAP.delete(gameButton)
-		}
+		trySetKeyState(key, false)
 	}, true)
 }
+
+const WIDTH = 800
+const HEIGHT = 600
 
 let {canvas, ctx, resize} = CanvasRender.createCanvasRender(WIDTH, HEIGHT, window.innerWidth, window.innerHeight)
 document.body.appendChild(canvas)
@@ -76,9 +77,10 @@ window.addEventListener('resize', () => {
 // may be this is overhead, may be not
 let tick = GameLoop.createTickFunction({
 	start: () => {
-		Game.processInput(KEYBOARD_INPUT_MAP)
+		Game.processInput(GAME_INPUT)
 	},
 	end: (fps) => {
+		updateGameInputButtonsState() // update state, some buttons could be unpressed already
 		ctx.font = "10px Arial"
 		ctx.fillText(`FPS: ${fps}`,WIDTH - 50,HEIGHT - 50)
 	},

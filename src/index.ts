@@ -1,3 +1,8 @@
+// TODO: setup tslint
+// TODO: no implicit any + more TS flags for super strict mode
+// TODO: split bundle for 2 files. Startup + game. Load game code via websockets?
+// TODO: add ability to record inputs + loop recorded state (how to clone game state? Deep copy?)
+
 import * as PointerInput from './PointerInput'
 import * as KeyboardInput from './KeyboardInput'
 import * as GamepadInput from './GamepadInput'

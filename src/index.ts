@@ -78,26 +78,24 @@ function processKeyboardInputs() {
 }
 
 function processGamepadInput() {
-	GamepadInput.getGamepads().forEach((gamepad, gamepadIndex) => {
+	const gamepads = GamepadInput.getGamepads()
+	for (let gamepadIndex = 0; gamepadIndex < gamepads.length; gamepadIndex++) {
 		const controllerIndex = gamepadIndex + 1
 		let gamepadController = GAME_INPUT.controllers[controllerIndex] // NOTE: +1 because zero is for controller
 		if (!gamepadController) {
 			gamepadController = new GameController()
 			GAME_INPUT.controllers[controllerIndex] = gamepadController
 		}
-		// ases = number[4]
-		// axes[0] => -y
-		// axes[1] => +x
-		// axes[2] => +y
-		// axes[3] => -x
-		// buttons = {pressed:boolean, value:number}[17]. TODO: how to figure out what are they? :D Are they static? Or i need to calibrate it every time?
-
+		// buttons = {pressed:boolean, value:number}[17].
+		// TODO: how to figure out what are they? :D Are they static? Or i need to calibrate it every time?
+		// axes[2], axes[3] - right stick
+		const gamepad = gamepads[gamepadIndex]
 		const axes = gamepad && gamepad.connected ? gamepad.axes : new Array(4).fill(0)
 		const stick_threshold = 0.1
-		gamepadController.moveLeft.pressed = axes[3] < - stick_threshold
-		gamepadController.moveRight.pressed = axes[1] > stick_threshold
-		gamepadController.moveUp.pressed = axes[0] < -stick_threshold
-		gamepadController.moveDown.pressed = axes[2] > stick_threshold 
+		gamepadController.moveLeft.pressed = axes[0] < -stick_threshold //axes[3] < - stick_threshold
+		gamepadController.moveRight.pressed = axes[0] > stick_threshold // down
+		gamepadController.moveUp.pressed = axes[1] < -stick_threshold // left
+		gamepadController.moveDown.pressed = axes[1] > stick_threshold 
 		gamepadController.leftShoulder.pressed = false
 		gamepadController.rightShoulder.pressed = false
 		gamepadController.actionLeft.pressed = false
@@ -106,11 +104,12 @@ function processGamepadInput() {
 		gamepadController.actionRight.pressed = false
 		gamepadController.start.pressed = false
 		gamepadController.back.pressed = false
-	})
+	}
 }
 
 let tick = GameLoop.createTickFunction({
 	start: () => {
+		processGamepadInput()
 		processKeyboardInputs()
 		gameUpdate(GAME_INPUT)
 	},
@@ -136,5 +135,4 @@ requestAnimationFrame(animate)
 
 KeyboardInput.startListen()
 PointerInput.startListen()
-GamepadInput.startListen()
 

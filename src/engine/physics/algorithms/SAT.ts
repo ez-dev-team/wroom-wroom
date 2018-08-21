@@ -10,14 +10,14 @@ import Projection from 'engine/types/Projection'
 // TODO: Axes - separate type?
 // TODO: depends on (0,0) position? or not?
 
-export function getMinTranslationVector(shape1:Shape, shape2:Shape):{axis:Vector, overlap:number}|null {
+export function getMinTranslationVector(shape1:Shape, shape2:Shape):{axis:Vector, overlap:number} | null {
 	let minOverlap = Infinity
-	let minAxis:Vector|null = null
+	let minAxis:Vector | null = null
 
 	function processAxes(axes:Vector[]):boolean {
 		for (let i = 0; i < axes.length; i++) {
-			let axis:any = axes[i]
-			let overlap = getOverlap(shape1, shape2, axis)
+			const axis:any = axes[i]
+			const overlap = getOverlap(shape1, shape2, axis)
 			if (!overlap) {
 				return false
 			}
@@ -60,8 +60,8 @@ export function getMinTranslationVector(shape1:Shape, shape2:Shape):{axis:Vector
 function fixOverlapIfOneShapeContainsAnother(p1:Projection, p2:Projection, overlap:number, axis:Vector):number {
 	if (p1.contains(p2) || p2.contains(p1)) {
 		// get the overlap plus the distance from the minimum end points
-		let mins = Math.abs(p1.min - p2.min)
-		let maxs = Math.abs(p1.max - p2.max)
+		const mins = Math.abs(p1.min - p2.min)
+		const maxs = Math.abs(p1.max - p2.max)
 		if (mins < maxs) {
 			// TODO: negate method
 			axis.x = -axis.x
@@ -76,8 +76,8 @@ function fixOverlapIfOneShapeContainsAnother(p1:Projection, p2:Projection, overl
 }
 
 function getOverlap(shape1:Shape, shape2:Shape, axis:Vector):number {
-	let projection1 = shape1.getProjection(axis)
-	let projection2 = shape2.getProjection(axis)
+	const projection1 = shape1.getProjection(axis)
+	const projection2 = shape2.getProjection(axis)
 	let overlap = projection1.getOverlap(projection2)
 	overlap = fixOverlapIfOneShapeContainsAnother(projection1, projection2, overlap, axis)
 	return overlap

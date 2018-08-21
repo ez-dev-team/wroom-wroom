@@ -51,10 +51,10 @@ export function gameUpdate(input:IGameInput) {
 }
 
 export function gameRender(ctx:CanvasRenderingContext2D, width:number, height:number) {
-	ctx.fillStyle = "#EEEEEE"
+	ctx.fillStyle = '#EEEEEE'
 	ctx.fillRect(0, 0, width, height)
 
-	ctx.fillStyle = "#000000"
+	ctx.fillStyle = '#000000'
 	ctx.fillRect(PLAYER.x - 10, PLAYER.y - 10, 20, 20)
 }
 

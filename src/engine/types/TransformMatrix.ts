@@ -20,8 +20,8 @@ export default class TransformMatrix {
 	}
 
 	rotate(angleRadians:number):TransformMatrix {
-		let cos = Math.cos(angleRadians)
-		let sin = Math.sin(angleRadians)
+		const cos = Math.cos(angleRadians)
+		const sin = Math.sin(angleRadians)
 		return this.transform(cos, sin, -sin, cos, 0, 0)
 	}
 
@@ -42,7 +42,7 @@ export default class TransformMatrix {
 	}
 
 	getInverse():TransformMatrix {
-		let dt = (this.a * this.d - this.b * this.c)
+		const dt = (this.a * this.d - this.b * this.c)
 
 		return new TransformMatrix().setTransform(
 			this.d / dt,
@@ -93,9 +93,9 @@ export default class TransformMatrix {
 		p.y = p.x * this.b + p.y * this.d + this.f
 	}
 
-	transform(a:number|TransformMatrix, b:number, c:number, d:number, e:number, f:number):TransformMatrix {
+	transform(a:number | TransformMatrix, b:number, c:number, d:number, e:number, f:number):TransformMatrix {
 		if (a instanceof TransformMatrix) {
-			let matrix = a
+			const matrix = a
 			this.transform(
 				matrix.a,
 				matrix.b,

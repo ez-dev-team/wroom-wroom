@@ -7,7 +7,7 @@ import * as PointerInput from './PointerInput'
 import * as KeyboardInput from './KeyboardInput'
 import * as GamepadInput from './GamepadInput'
 import * as GameLoop from 'engine/GameLoop'
-import {GameController, IGameInput, gameUpdate, gameRender} from 'game/Game'
+import { GameController, IGameInput, gameUpdate, gameRender } from 'game/Game'
 
 const PIXEL_RATIO = window.devicePixelRatio || 1
 const TARGET_MS_PER_FRAME = 1000 / 60
@@ -95,7 +95,7 @@ function processGamepadInput() {
 		gamepadController.moveLeft.pressed = axes[0] < -stick_threshold //axes[3] < - stick_threshold
 		gamepadController.moveRight.pressed = axes[0] > stick_threshold // down
 		gamepadController.moveUp.pressed = axes[1] < -stick_threshold // left
-		gamepadController.moveDown.pressed = axes[1] > stick_threshold 
+		gamepadController.moveDown.pressed = axes[1] > stick_threshold
 		gamepadController.leftShoulder.pressed = false
 		gamepadController.rightShoulder.pressed = false
 		gamepadController.actionLeft.pressed = false
@@ -107,7 +107,7 @@ function processGamepadInput() {
 	}
 }
 
-let tick = GameLoop.createTickFunction({
+const tick = GameLoop.createTickFunction({
 	start: () => {
 		processGamepadInput()
 		processKeyboardInputs()
@@ -121,12 +121,12 @@ let tick = GameLoop.createTickFunction({
 		gameRender(ctx, WIDTH, HEIGHT)
 	},
 	end: (fps) => {
-		ctx.font = "10px Arial"
-		ctx.fillText(`FPS: ${fps}`,WIDTH - 50,HEIGHT - 50)
+		ctx.font = '10px Arial'
+		ctx.fillText(`FPS: ${fps}`, WIDTH - 50, HEIGHT - 50)
 	}
 })
 
-let animate = (elapsed:number) => {
+const animate = (elapsed:number) => {
 	tick(elapsed)
 	requestAnimationFrame(animate)
 }

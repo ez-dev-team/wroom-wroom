@@ -10,14 +10,14 @@ export default class Shape {
 	}
 
 	getEdgesNormals():Vector[] {
-		let axes:Vector[] = []
+		const axes:Vector[] = []
 		for (let i = 0; i < this.vertices.length; i++) {
 			// get the current vertex
-			let p1 = this.vertices[i]
+			const p1 = this.vertices[i]
 			// get the next vertex
-			let p2 = this.vertices[i + 1 == this.vertices.length ? 0 : i + 1]
+			const p2 = this.vertices[i + 1 == this.vertices.length ? 0 : i + 1]
 			// subtract the two to get the edge vector
-			let edge = p2.subtract(p1)
+			const edge = p2.subtract(p1)
 			// get either perpendicular vector
 			axes[i] = edge.left()
 		}
@@ -26,12 +26,12 @@ export default class Shape {
 	}
 
 	getProjection(axis:Vector):Projection {
-		let normalized = axis.asNormalized()
+		const normalized = axis.asNormalized()
 		let min = Infinity
 		let max = -Infinity
 
 		for (let i = 0; i < this.vertices.length; i++) {
-			let dot = normalized.dot(this.vertices[i])
+			const dot = normalized.dot(this.vertices[i])
 			if (dot < min) {
 				min = dot
 			}

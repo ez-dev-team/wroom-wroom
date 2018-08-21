@@ -15,7 +15,7 @@ export default class RingBuffer<T> {
 	}
 
 	enqueue(item:T):void {
-		let newTail = (this.tail + 1) % this.queue.length
+		const newTail = (this.tail + 1) % this.queue.length
 		if (newTail === this.head) {
 			throw new Error('Maximum queue size exceeded')
 		}
@@ -25,7 +25,7 @@ export default class RingBuffer<T> {
 	}
 
 	dequeue():T {
-		let item = this.queue[this.head]
+		const item = this.queue[this.head]
 		this.head = (this.head + 1) % this.queue.length
 		return item
 	}

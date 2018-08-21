@@ -24,9 +24,9 @@ export default class Vector {
 	}
 
 	asNormalized():Vector {
-		let l = this.length()
-		let x = this.x / l
-		let y = this.y / l
+		const l = this.length()
+		const x = this.x / l
+		const y = this.y / l
 
 		return new Vector(x, y)
 	}

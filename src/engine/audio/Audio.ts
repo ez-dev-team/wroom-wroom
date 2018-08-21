@@ -12,7 +12,7 @@ export function init() {
 	// TODO: should not be here, return wrapper to game
 	// TODO: change BG music by location
 	// audio element ===> loading as a stream, no need to decode entire buffer
-	let audio = new Audio()
+	const audio = new Audio()
 	audio.src = '/assets/audio/background.mp3'
 	audio.controls = false
 	audio.loop = true
@@ -27,14 +27,14 @@ export function init() {
 }
 
 export function playHit() {
-	let sound = createSound(HIT_BUFFER)
+	const sound = createSound(HIT_BUFFER)
 	sound.gainNode.gain.value = 1 // TODO: effects volume, take from settings
 	playSound(sound.source)
 }
 
 function loadAudio(url:string):Promise<AudioBuffer> {
 	return new Promise((resolve, reject) => {
-		let request = new XMLHttpRequest()
+		const request = new XMLHttpRequest()
 		request.open('GET', url, true)
 		request.responseType = 'arraybuffer'
 
@@ -58,10 +58,10 @@ function playSound(source:AudioBufferSourceNode) {
 }
 
 function createSound(buffer:AudioBuffer):{source:AudioBufferSourceNode, gainNode:GainNode} {
-	let source = audioContext.createBufferSource()
+	const source = audioContext.createBufferSource()
 	source.buffer = buffer
 
-	let gainNode = audioContext.createGain()
+	const gainNode = audioContext.createGain()
 	source.connect(gainNode)
 	gainNode.connect(audioContext.destination)
 

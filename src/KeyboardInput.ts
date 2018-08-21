@@ -29,7 +29,7 @@ export function startListen() {
 
 	document.addEventListener('keyup', (event) => {
 		const keyCode = event.keyCode || event.which
-		// Do not reset game keys state here to be sure that we didn't miss user input. 
+		// Do not reset game keys state here to be sure that we didn't miss user input.
 		// Resetting should be done on game tick end.
 		ACTUAL_KEYS_STATE.set(keyCode, false)
 	}, true)

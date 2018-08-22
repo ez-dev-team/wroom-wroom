@@ -1,8 +1,15 @@
-export class GameButton {
+import {
+	IGameButton,
+	IGameController,
+	IGameInput,
+	IGameMemory
+} from './GameTypes'
+
+class GameButton implements IGameButton {
 	pressed = false
 }
 
-export class GameController {
+class GameController implements IGameController {
 	moveUp = new GameButton()
 	moveDown = new GameButton()
 	moveLeft = new GameButton()
@@ -17,13 +24,18 @@ export class GameController {
 	back = new GameButton()
 }
 
-export interface IGameInput {
-	controllers:GameController[]
+export function createController():IGameController {
+	return new GameController()
 }
 
-const PLAYER = { x: 30, y: 30 }
+export function gameUpdate(memory:IGameMemory, input:IGameInput) {
+	if (!memory.isInitialized) {
+		memory.isInitialized = true
 
-export function gameUpdate(input:IGameInput) {
+		memory.playerX = 30
+		memory.playerY = 30
+	}
+
 	let dx = 0
 	let dy = 0
 
@@ -46,15 +58,15 @@ export function gameUpdate(input:IGameInput) {
 		}
 	})
 
-	PLAYER.x += dx
-	PLAYER.y += dy
+	memory.playerX += dx
+	memory.playerY += dy
 }
 
-export function gameRender(ctx:CanvasRenderingContext2D, width:number, height:number) {
-	ctx.fillStyle = '#EEEEEE'
+export function gameRender(memory:IGameMemory, ctx:CanvasRenderingContext2D, width:number, height:number) {
+	ctx.fillStyle = '#FF0000'
 	ctx.fillRect(0, 0, width, height)
 
 	ctx.fillStyle = '#000000'
-	ctx.fillRect(PLAYER.x - 10, PLAYER.y - 10, 20, 20)
+	ctx.fillRect(memory.playerX - 10, memory.playerY - 10, 20, 20)
 }
 

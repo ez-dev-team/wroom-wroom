@@ -1,2 +1,161 @@
-!function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t){document.body.innerHTML="a * b = 30"}]);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vd2VicGFjay9ib290c3RyYXAiLCJ3ZWJwYWNrOi8vLy4vZW5naW5lL2luZGV4LnRzIl0sIm5hbWVzIjpbImluc3RhbGxlZE1vZHVsZXMiLCJfX3dlYnBhY2tfcmVxdWlyZV9fIiwibW9kdWxlSWQiLCJleHBvcnRzIiwibW9kdWxlIiwiaSIsImwiLCJtb2R1bGVzIiwiY2FsbCIsIm0iLCJjIiwiZCIsIm5hbWUiLCJnZXR0ZXIiLCJvIiwiT2JqZWN0IiwiZGVmaW5lUHJvcGVydHkiLCJlbnVtZXJhYmxlIiwiZ2V0IiwiciIsIlN5bWJvbCIsInRvU3RyaW5nVGFnIiwidmFsdWUiLCJ0IiwibW9kZSIsIl9fZXNNb2R1bGUiLCJucyIsImNyZWF0ZSIsImtleSIsImJpbmQiLCJuIiwib2JqZWN0IiwicHJvcGVydHkiLCJwcm90b3R5cGUiLCJoYXNPd25Qcm9wZXJ0eSIsInAiLCJzIiwiZG9jdW1lbnQiLCJib2R5IiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiYUFDQSxJQUFBQSxLQUdBLFNBQUFDLEVBQUFDLEdBR0EsR0FBQUYsRUFBQUUsR0FDQSxPQUFBRixFQUFBRSxHQUFBQyxRQUdBLElBQUFDLEVBQUFKLEVBQUFFLElBQ0FHLEVBQUFILEVBQ0FJLEdBQUEsRUFDQUgsWUFVQSxPQU5BSSxFQUFBTCxHQUFBTSxLQUFBSixFQUFBRCxRQUFBQyxJQUFBRCxRQUFBRixHQUdBRyxFQUFBRSxHQUFBLEVBR0FGLEVBQUFELFFBS0FGLEVBQUFRLEVBQUFGLEVBR0FOLEVBQUFTLEVBQUFWLEVBR0FDLEVBQUFVLEVBQUEsU0FBQVIsRUFBQVMsRUFBQUMsR0FDQVosRUFBQWEsRUFBQVgsRUFBQVMsSUFDQUcsT0FBQUMsZUFBQWIsRUFBQVMsR0FBMENLLFlBQUEsRUFBQUMsSUFBQUwsS0FLMUNaLEVBQUFrQixFQUFBLFNBQUFoQixHQUNBLG9CQUFBaUIsZUFBQUMsYUFDQU4sT0FBQUMsZUFBQWIsRUFBQWlCLE9BQUFDLGFBQXdEQyxNQUFBLFdBRXhEUCxPQUFBQyxlQUFBYixFQUFBLGNBQWlEbUIsT0FBQSxLQVFqRHJCLEVBQUFzQixFQUFBLFNBQUFELEVBQUFFLEdBRUEsR0FEQSxFQUFBQSxJQUFBRixFQUFBckIsRUFBQXFCLElBQ0EsRUFBQUUsRUFBQSxPQUFBRixFQUNBLEtBQUFFLEdBQUEsaUJBQUFGLFFBQUFHLFdBQUEsT0FBQUgsRUFDQSxJQUFBSSxFQUFBWCxPQUFBWSxPQUFBLE1BR0EsR0FGQTFCLEVBQUFrQixFQUFBTyxHQUNBWCxPQUFBQyxlQUFBVSxFQUFBLFdBQXlDVCxZQUFBLEVBQUFLLFVBQ3pDLEVBQUFFLEdBQUEsaUJBQUFGLEVBQUEsUUFBQU0sS0FBQU4sRUFBQXJCLEVBQUFVLEVBQUFlLEVBQUFFLEVBQUEsU0FBQUEsR0FBZ0gsT0FBQU4sRUFBQU0sSUFBcUJDLEtBQUEsS0FBQUQsSUFDckksT0FBQUYsR0FJQXpCLEVBQUE2QixFQUFBLFNBQUExQixHQUNBLElBQUFTLEVBQUFULEtBQUFxQixXQUNBLFdBQTJCLE9BQUFyQixFQUFBLFNBQzNCLFdBQWlDLE9BQUFBLEdBRWpDLE9BREFILEVBQUFVLEVBQUFFLEVBQUEsSUFBQUEsR0FDQUEsR0FJQVosRUFBQWEsRUFBQSxTQUFBaUIsRUFBQUMsR0FBc0QsT0FBQWpCLE9BQUFrQixVQUFBQyxlQUFBMUIsS0FBQXVCLEVBQUFDLElBR3REL0IsRUFBQWtDLEVBQUEsR0FJQWxDLElBQUFtQyxFQUFBLG1CQy9FQUMsU0FBU0MsS0FBS0MsVUFBWSIsImZpbGUiOiJidW5kbGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIgXHQvLyBUaGUgbW9kdWxlIGNhY2hlXG4gXHR2YXIgaW5zdGFsbGVkTW9kdWxlcyA9IHt9O1xuXG4gXHQvLyBUaGUgcmVxdWlyZSBmdW5jdGlvblxuIFx0ZnVuY3Rpb24gX193ZWJwYWNrX3JlcXVpcmVfXyhtb2R1bGVJZCkge1xuXG4gXHRcdC8vIENoZWNrIGlmIG1vZHVsZSBpcyBpbiBjYWNoZVxuIFx0XHRpZihpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXSkge1xuIFx0XHRcdHJldHVybiBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXS5leHBvcnRzO1xuIFx0XHR9XG4gXHRcdC8vIENyZWF0ZSBhIG5ldyBtb2R1bGUgKGFuZCBwdXQgaXQgaW50byB0aGUgY2FjaGUpXG4gXHRcdHZhciBtb2R1bGUgPSBpbnN0YWxsZWRNb2R1bGVzW21vZHVsZUlkXSA9IHtcbiBcdFx0XHRpOiBtb2R1bGVJZCxcbiBcdFx0XHRsOiBmYWxzZSxcbiBcdFx0XHRleHBvcnRzOiB7fVxuIFx0XHR9O1xuXG4gXHRcdC8vIEV4ZWN1dGUgdGhlIG1vZHVsZSBmdW5jdGlvblxuIFx0XHRtb2R1bGVzW21vZHVsZUlkXS5jYWxsKG1vZHVsZS5leHBvcnRzLCBtb2R1bGUsIG1vZHVsZS5leHBvcnRzLCBfX3dlYnBhY2tfcmVxdWlyZV9fKTtcblxuIFx0XHQvLyBGbGFnIHRoZSBtb2R1bGUgYXMgbG9hZGVkXG4gXHRcdG1vZHVsZS5sID0gdHJ1ZTtcblxuIFx0XHQvLyBSZXR1cm4gdGhlIGV4cG9ydHMgb2YgdGhlIG1vZHVsZVxuIFx0XHRyZXR1cm4gbW9kdWxlLmV4cG9ydHM7XG4gXHR9XG5cblxuIFx0Ly8gZXhwb3NlIHRoZSBtb2R1bGVzIG9iamVjdCAoX193ZWJwYWNrX21vZHVsZXNfXylcbiBcdF9fd2VicGFja19yZXF1aXJlX18ubSA9IG1vZHVsZXM7XG5cbiBcdC8vIGV4cG9zZSB0aGUgbW9kdWxlIGNhY2hlXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLmMgPSBpbnN0YWxsZWRNb2R1bGVzO1xuXG4gXHQvLyBkZWZpbmUgZ2V0dGVyIGZ1bmN0aW9uIGZvciBoYXJtb255IGV4cG9ydHNcbiBcdF9fd2VicGFja19yZXF1aXJlX18uZCA9IGZ1bmN0aW9uKGV4cG9ydHMsIG5hbWUsIGdldHRlcikge1xuIFx0XHRpZighX193ZWJwYWNrX3JlcXVpcmVfXy5vKGV4cG9ydHMsIG5hbWUpKSB7XG4gXHRcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIG5hbWUsIHsgZW51bWVyYWJsZTogdHJ1ZSwgZ2V0OiBnZXR0ZXIgfSk7XG4gXHRcdH1cbiBcdH07XG5cbiBcdC8vIGRlZmluZSBfX2VzTW9kdWxlIG9uIGV4cG9ydHNcbiBcdF9fd2VicGFja19yZXF1aXJlX18uciA9IGZ1bmN0aW9uKGV4cG9ydHMpIHtcbiBcdFx0aWYodHlwZW9mIFN5bWJvbCAhPT0gJ3VuZGVmaW5lZCcgJiYgU3ltYm9sLnRvU3RyaW5nVGFnKSB7XG4gXHRcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFN5bWJvbC50b1N0cmluZ1RhZywgeyB2YWx1ZTogJ01vZHVsZScgfSk7XG4gXHRcdH1cbiBcdFx0T2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICdfX2VzTW9kdWxlJywgeyB2YWx1ZTogdHJ1ZSB9KTtcbiBcdH07XG5cbiBcdC8vIGNyZWF0ZSBhIGZha2UgbmFtZXNwYWNlIG9iamVjdFxuIFx0Ly8gbW9kZSAmIDE6IHZhbHVlIGlzIGEgbW9kdWxlIGlkLCByZXF1aXJlIGl0XG4gXHQvLyBtb2RlICYgMjogbWVyZ2UgYWxsIHByb3BlcnRpZXMgb2YgdmFsdWUgaW50byB0aGUgbnNcbiBcdC8vIG1vZGUgJiA0OiByZXR1cm4gdmFsdWUgd2hlbiBhbHJlYWR5IG5zIG9iamVjdFxuIFx0Ly8gbW9kZSAmIDh8MTogYmVoYXZlIGxpa2UgcmVxdWlyZVxuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy50ID0gZnVuY3Rpb24odmFsdWUsIG1vZGUpIHtcbiBcdFx0aWYobW9kZSAmIDEpIHZhbHVlID0gX193ZWJwYWNrX3JlcXVpcmVfXyh2YWx1ZSk7XG4gXHRcdGlmKG1vZGUgJiA4KSByZXR1cm4gdmFsdWU7XG4gXHRcdGlmKChtb2RlICYgNCkgJiYgdHlwZW9mIHZhbHVlID09PSAnb2JqZWN0JyAmJiB2YWx1ZSAmJiB2YWx1ZS5fX2VzTW9kdWxlKSByZXR1cm4gdmFsdWU7XG4gXHRcdHZhciBucyA9IE9iamVjdC5jcmVhdGUobnVsbCk7XG4gXHRcdF9fd2VicGFja19yZXF1aXJlX18ucihucyk7XG4gXHRcdE9iamVjdC5kZWZpbmVQcm9wZXJ0eShucywgJ2RlZmF1bHQnLCB7IGVudW1lcmFibGU6IHRydWUsIHZhbHVlOiB2YWx1ZSB9KTtcbiBcdFx0aWYobW9kZSAmIDIgJiYgdHlwZW9mIHZhbHVlICE9ICdzdHJpbmcnKSBmb3IodmFyIGtleSBpbiB2YWx1ZSkgX193ZWJwYWNrX3JlcXVpcmVfXy5kKG5zLCBrZXksIGZ1bmN0aW9uKGtleSkgeyByZXR1cm4gdmFsdWVba2V5XTsgfS5iaW5kKG51bGwsIGtleSkpO1xuIFx0XHRyZXR1cm4gbnM7XG4gXHR9O1xuXG4gXHQvLyBnZXREZWZhdWx0RXhwb3J0IGZ1bmN0aW9uIGZvciBjb21wYXRpYmlsaXR5IHdpdGggbm9uLWhhcm1vbnkgbW9kdWxlc1xuIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5uID0gZnVuY3Rpb24obW9kdWxlKSB7XG4gXHRcdHZhciBnZXR0ZXIgPSBtb2R1bGUgJiYgbW9kdWxlLl9fZXNNb2R1bGUgP1xuIFx0XHRcdGZ1bmN0aW9uIGdldERlZmF1bHQoKSB7IHJldHVybiBtb2R1bGVbJ2RlZmF1bHQnXTsgfSA6XG4gXHRcdFx0ZnVuY3Rpb24gZ2V0TW9kdWxlRXhwb3J0cygpIHsgcmV0dXJuIG1vZHVsZTsgfTtcbiBcdFx0X193ZWJwYWNrX3JlcXVpcmVfXy5kKGdldHRlciwgJ2EnLCBnZXR0ZXIpO1xuIFx0XHRyZXR1cm4gZ2V0dGVyO1xuIFx0fTtcblxuIFx0Ly8gT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLm8gPSBmdW5jdGlvbihvYmplY3QsIHByb3BlcnR5KSB7IHJldHVybiBPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGwob2JqZWN0LCBwcm9wZXJ0eSk7IH07XG5cbiBcdC8vIF9fd2VicGFja19wdWJsaWNfcGF0aF9fXG4gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLnAgPSBcIlwiO1xuXG5cbiBcdC8vIExvYWQgZW50cnkgbW9kdWxlIGFuZCByZXR1cm4gZXhwb3J0c1xuIFx0cmV0dXJuIF9fd2VicGFja19yZXF1aXJlX18oX193ZWJwYWNrX3JlcXVpcmVfXy5zID0gMCk7XG4iLCJsZXQgYTpudW1iZXIgPSA1XG5sZXQgYjpudW1iZXIgPSA2XG5cbmRvY3VtZW50LmJvZHkuaW5uZXJIVE1MID0gYGEgKiBiID0gJHthICogYn1gIl0sInNvdXJjZVJvb3QiOiIifQ==
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/GamepadInput.ts":
+/*!*****************************!*\
+  !*** ./src/GamepadInput.ts ***!
+  \*****************************/
+/*! exports provided: getGamepads */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getGamepads\", function() { return getGamepads; });\nfunction getGamepads() {\n    return navigator.getGamepads\n        ? navigator.getGamepads()\n        : (navigator['webkitGetGamepads'] ? navigator['webkitGetGamepads'] : []);\n}\n\n\n//# sourceURL=webpack:///./src/GamepadInput.ts?");
+
+/***/ }),
+
+/***/ "./src/KeyboardInput.ts":
+/*!******************************!*\
+  !*** ./src/KeyboardInput.ts ***!
+  \******************************/
+/*! exports provided: KeyboardCodes, startListen, isKeyPressed, gameTickDone */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"KeyboardCodes\", function() { return KeyboardCodes; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"startListen\", function() { return startListen; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isKeyPressed\", function() { return isKeyPressed; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"gameTickDone\", function() { return gameTickDone; });\nvar KeyboardCodes;\n(function (KeyboardCodes) {\n    KeyboardCodes[KeyboardCodes[\"A\"] = 65] = \"A\";\n    KeyboardCodes[KeyboardCodes[\"W\"] = 87] = \"W\";\n    KeyboardCodes[KeyboardCodes[\"S\"] = 83] = \"S\";\n    KeyboardCodes[KeyboardCodes[\"D\"] = 68] = \"D\";\n    KeyboardCodes[KeyboardCodes[\"Q\"] = 81] = \"Q\";\n    KeyboardCodes[KeyboardCodes[\"E\"] = 69] = \"E\";\n    KeyboardCodes[KeyboardCodes[\"U\"] = 85] = \"U\";\n    KeyboardCodes[KeyboardCodes[\"I\"] = 73] = \"I\";\n    KeyboardCodes[KeyboardCodes[\"O\"] = 79] = \"O\";\n    KeyboardCodes[KeyboardCodes[\"P\"] = 80] = \"P\";\n    KeyboardCodes[KeyboardCodes[\"LEFT_ARROW\"] = 37] = \"LEFT_ARROW\";\n    KeyboardCodes[KeyboardCodes[\"UP_ARROW\"] = 38] = \"UP_ARROW\";\n    KeyboardCodes[KeyboardCodes[\"RIGHT_ARROW\"] = 39] = \"RIGHT_ARROW\";\n    KeyboardCodes[KeyboardCodes[\"DOWN_ARROW\"] = 40] = \"DOWN_ARROW\";\n    KeyboardCodes[KeyboardCodes[\"SPACE\"] = 32] = \"SPACE\";\n    KeyboardCodes[KeyboardCodes[\"ESCAPE\"] = 27] = \"ESCAPE\";\n})(KeyboardCodes || (KeyboardCodes = {}));\nvar GAME_KEYS_STATE = new Map();\nvar ACTUAL_KEYS_STATE = new Map();\nfunction startListen() {\n    document.addEventListener('keydown', function (event) {\n        var keyCode = event.keyCode || event.which;\n        GAME_KEYS_STATE.set(keyCode, true);\n        ACTUAL_KEYS_STATE.set(keyCode, true);\n    }, true);\n    document.addEventListener('keyup', function (event) {\n        var keyCode = event.keyCode || event.which;\n        // Do not reset game keys state here to be sure that we didn't miss user input.\n        // Resetting should be done on game tick end.\n        ACTUAL_KEYS_STATE.set(keyCode, false);\n    }, true);\n}\nfunction isKeyPressed(code) {\n    return !!GAME_KEYS_STATE.get(code);\n}\nfunction gameTickDone() {\n    // Update game keys state to actual state when tick is done\n    GAME_KEYS_STATE = new Map(ACTUAL_KEYS_STATE);\n}\n\n\n//# sourceURL=webpack:///./src/KeyboardInput.ts?");
+
+/***/ }),
+
+/***/ "./src/PointerInput.ts":
+/*!*****************************!*\
+  !*** ./src/PointerInput.ts ***!
+  \*****************************/
+/*! exports provided: startListen */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"startListen\", function() { return startListen; });\nvar POINTER = {\n    x: 0,\n    y: 0\n};\nfunction startListen() {\n    document.addEventListener('mousemove', function (event) {\n        POINTER.x = event.screenX;\n        POINTER.y = event.screenY;\n    }, true);\n    document.addEventListener('touchmove', function (event) {\n        var touch = event.touches[0];\n        POINTER.x = touch.screenX;\n        POINTER.y = touch.screenY;\n    }, true);\n}\n\n\n//# sourceURL=webpack:///./src/PointerInput.ts?");
+
+/***/ }),
+
+/***/ "./src/engine/GameLoop.ts":
+/*!********************************!*\
+  !*** ./src/engine/GameLoop.ts ***!
+  \********************************/
+/*! exports provided: createTickFunction */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createTickFunction\", function() { return createTickFunction; });\nvar MAX_LAG_FIX_STEPS_COUNT = 240;\nvar UPDATE_FPS_TIMEOUT = 1000;\nvar UPDATE_FPS_EXPONENTIAL_MOVING_DECAY = 0.25;\nfunction createTickFunction(params) {\n    var DESIRED_FPS = params.fps || 60;\n    var MS_PER_UPDATE = 1000 / DESIRED_FPS;\n    var prevTime = 0;\n    var lag = 0;\n    var actualFps = DESIRED_FPS;\n    var lastFpsUpdate = 0;\n    var framesThisSecond = 0;\n    function panic() {\n        // TODO: use logger\n        console.log('panic');\n        // discard the unsimulated time\n        lag = 0;\n        // ... snap the player to the authoritative state (from server or smth)\n    }\n    function updateActualFps(elapsed) {\n        // update every UPDATE_FPS_TIMEOUT\n        if (elapsed > lastFpsUpdate + UPDATE_FPS_TIMEOUT) {\n            // compute the new actual FPS\n            actualFps = UPDATE_FPS_EXPONENTIAL_MOVING_DECAY * framesThisSecond + (1 - UPDATE_FPS_EXPONENTIAL_MOVING_DECAY) * actualFps;\n            lastFpsUpdate = elapsed;\n            framesThisSecond = 0;\n        }\n        framesThisSecond++;\n    }\n    return function (elapsed) {\n        // Throttle the frame rate\n        if (elapsed < prevTime + MS_PER_UPDATE) {\n            return;\n        }\n        updateActualFps(elapsed);\n        lag += elapsed - prevTime;\n        prevTime = elapsed;\n        // for processing inputs or smth\n        params.start();\n        var steps = 0;\n        while (lag >= MS_PER_UPDATE) {\n            params.update(elapsed);\n            lag -= MS_PER_UPDATE;\n            // Sanity check\n            if (++steps >= MAX_LAG_FIX_STEPS_COUNT) {\n                panic(); // fix things\n                break; // bail out\n            }\n        }\n        params.render(lag / elapsed);\n        params.end(actualFps);\n    };\n}\n\n\n//# sourceURL=webpack:///./src/engine/GameLoop.ts?");
+
+/***/ }),
+
+/***/ "./src/game/Game.ts":
+/*!**************************!*\
+  !*** ./src/game/Game.ts ***!
+  \**************************/
+/*! exports provided: GameButton, GameController, gameUpdate, gameRender */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GameButton\", function() { return GameButton; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GameController\", function() { return GameController; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"gameUpdate\", function() { return gameUpdate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"gameRender\", function() { return gameRender; });\nvar GameButton = /** @class */ (function () {\n    function GameButton() {\n        this.pressed = false;\n    }\n    return GameButton;\n}());\n\nvar GameController = /** @class */ (function () {\n    function GameController() {\n        this.moveUp = new GameButton();\n        this.moveDown = new GameButton();\n        this.moveLeft = new GameButton();\n        this.moveRight = new GameButton();\n        this.actionDown = new GameButton();\n        this.actionUp = new GameButton();\n        this.actionLeft = new GameButton();\n        this.actionRight = new GameButton();\n        this.leftShoulder = new GameButton();\n        this.rightShoulder = new GameButton();\n        this.start = new GameButton();\n        this.back = new GameButton();\n    }\n    return GameController;\n}());\n\nfunction gameUpdate(memory, input) {\n    if (!memory.isInitialized) {\n        memory.isInitialized = true;\n        memory.playerX = 30;\n        memory.playerY = 30;\n    }\n    var dx = 0;\n    var dy = 0;\n    function getStep() {\n        return 4; //event.repeat ? 15 : 2 // just to move faster for demo purposes\n    }\n    input.controllers.forEach(function (controller) {\n        if (controller.moveUp.pressed) {\n            dy -= getStep();\n        }\n        if (controller.moveDown.pressed) {\n            dy += getStep();\n        }\n        if (controller.moveRight.pressed) {\n            dx += getStep();\n        }\n        if (controller.moveLeft.pressed) {\n            dx -= getStep();\n        }\n    });\n    memory.playerX += dx;\n    memory.playerY += dy;\n}\nfunction gameRender(memory, ctx, width, height) {\n    ctx.fillStyle = '#EEEEEE';\n    ctx.fillRect(0, 0, width, height);\n    ctx.fillStyle = '#000000';\n    ctx.fillRect(memory.playerX - 10, memory.playerY - 10, 20, 20);\n}\n\n\n//# sourceURL=webpack:///./src/game/Game.ts?");
+
+/***/ }),
+
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _PointerInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PointerInput */ \"./src/PointerInput.ts\");\n/* harmony import */ var _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KeyboardInput */ \"./src/KeyboardInput.ts\");\n/* harmony import */ var _GamepadInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GamepadInput */ \"./src/GamepadInput.ts\");\n/* harmony import */ var engine_GameLoop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! engine/GameLoop */ \"./src/engine/GameLoop.ts\");\n/* harmony import */ var game_Game__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! game/Game */ \"./src/game/Game.ts\");\n// TODO: no implicit any + more TS flags for super strict mode\n// TODO: split bundle for 2 files. Startup + game. Load game code via websockets?\n// TODO: add ability to record inputs + loop recorded state (how to clone game state? Deep copy?)\n\n\n\n\n\nvar PIXEL_RATIO = window.devicePixelRatio || 1;\nvar TARGET_MS_PER_FRAME = 1000 / 60;\nvar WIDTH = 800;\nvar HEIGHT = 600;\nvar canvas = document.createElement('canvas');\nvar ctx = canvas.getContext('2d');\ndocument.body.appendChild(canvas);\n// for sprites scaled up to retina resolution\nctx.mozImageSmoothingEnabled = false;\nctx.imageSmoothingEnabled = false;\nfunction resizeCanvas(width, height, outputWidth, outputHeight) {\n    var scaleX = outputWidth / width;\n    var scaleY = outputHeight / height;\n    canvas.width = scaleX * width * PIXEL_RATIO;\n    canvas.height = scaleY * height * PIXEL_RATIO;\n    canvas.style.width = scaleX * width + \"px\";\n    canvas.style.height = scaleY * height + \"px\";\n    ctx.scale(scaleX * PIXEL_RATIO, scaleY * PIXEL_RATIO);\n}\n// resize to fit window\nresizeCanvas(WIDTH, HEIGHT, window.innerWidth, window.innerHeight);\nwindow.addEventListener('resize', function () {\n    resizeCanvas(WIDTH, HEIGHT, window.innerWidth, window.innerHeight);\n});\n// TODO: loading queue:\n// 1. let the game push tasks to queue <=== load sounds (bg, effects), sprites, smth else\n// 2. show the loading progress in the loading screen\n// 3. make some logo on the loading screen?\n// 4.\n// TODO: Hot reloading for game code (websockets?)\nvar GAME_MEMORY = {};\nvar GAME_INPUT = {\n    controllers: [\n        new game_Game__WEBPACK_IMPORTED_MODULE_4__[\"GameController\"]()\n    ]\n};\nfunction processKeyboardInputs() {\n    var keyboardController = GAME_INPUT.controllers[0];\n    keyboardController.moveLeft.pressed = _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].A)\n        || _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].LEFT_ARROW);\n    keyboardController.moveRight.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].D)\n        || _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].RIGHT_ARROW));\n    keyboardController.moveUp.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].W)\n        || _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].UP_ARROW));\n    keyboardController.moveDown.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].S)\n        || _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].DOWN_ARROW));\n    keyboardController.leftShoulder.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].Q));\n    keyboardController.rightShoulder.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].E));\n    keyboardController.actionLeft.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].U));\n    keyboardController.actionDown.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].I));\n    keyboardController.actionUp.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].O));\n    keyboardController.actionRight.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].P));\n    keyboardController.start.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].SPACE));\n    keyboardController.back.pressed = (_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"isKeyPressed\"](_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"KeyboardCodes\"].ESCAPE));\n    _KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"gameTickDone\"]();\n}\nfunction processGamepadInput() {\n    var gamepads = _GamepadInput__WEBPACK_IMPORTED_MODULE_2__[\"getGamepads\"]();\n    for (var gamepadIndex = 0; gamepadIndex < gamepads.length; gamepadIndex++) {\n        var controllerIndex = gamepadIndex + 1;\n        var gamepadController = GAME_INPUT.controllers[controllerIndex]; // NOTE: +1 because zero is for controller\n        if (!gamepadController) {\n            gamepadController = new game_Game__WEBPACK_IMPORTED_MODULE_4__[\"GameController\"]();\n            GAME_INPUT.controllers[controllerIndex] = gamepadController;\n        }\n        // buttons = {pressed:boolean, value:number}[17].\n        // TODO: how to figure out what are they? :D Are they static? Or i need to calibrate it every time?\n        // axes[2], axes[3] - right stick\n        var gamepad = gamepads[gamepadIndex];\n        var axes = gamepad && gamepad.connected ? gamepad.axes : new Array(4).fill(0);\n        var stick_threshold = 0.1;\n        gamepadController.moveLeft.pressed = axes[0] < -stick_threshold; //axes[3] < - stick_threshold\n        gamepadController.moveRight.pressed = axes[0] > stick_threshold; // down\n        gamepadController.moveUp.pressed = axes[1] < -stick_threshold; // left\n        gamepadController.moveDown.pressed = axes[1] > stick_threshold;\n        gamepadController.leftShoulder.pressed = false;\n        gamepadController.rightShoulder.pressed = false;\n        gamepadController.actionLeft.pressed = false;\n        gamepadController.actionDown.pressed = false;\n        gamepadController.actionUp.pressed = false;\n        gamepadController.actionRight.pressed = false;\n        gamepadController.start.pressed = false;\n        gamepadController.back.pressed = false;\n    }\n}\nvar loadGameCodeIsInProgress = false;\nfunction loadGameCode() {\n    if (loadGameCodeIsInProgress) {\n        return;\n    }\n    loadGameCodeIsInProgress = true;\n    var xhr = new XMLHttpRequest();\n    xhr.onreadystatechange = function () {\n        if (xhr.readyState === 4) {\n            if (xhr.status === 200 || xhr.status === 0) {\n                try {\n                    console.log('ev', eval(xhr.responseText));\n                    loadGameCodeIsInProgress = false;\n                }\n                catch (e) {\n                    loadGameCodeIsInProgress = false;\n                    console.error('failed to load game code', e);\n                }\n            }\n            else {\n                console.error('failed to load game code', xhr.status, xhr);\n            }\n        }\n    };\n    try {\n        xhr.open('GET', '/game.js', true);\n        xhr.send();\n    }\n    catch (e) {\n        console.error('failed to load game code', e);\n    }\n}\nvar tick = engine_GameLoop__WEBPACK_IMPORTED_MODULE_3__[\"createTickFunction\"]({\n    start: function () {\n        loadGameCode();\n        processGamepadInput();\n        processKeyboardInputs();\n        Object(game_Game__WEBPACK_IMPORTED_MODULE_4__[\"gameUpdate\"])(GAME_MEMORY, GAME_INPUT);\n    },\n    update: function () {\n    },\n    // TODO: fix frame rate, join the update+render functions\n    render: function () {\n        ctx.clearRect(0, 0, WIDTH, HEIGHT);\n        Object(game_Game__WEBPACK_IMPORTED_MODULE_4__[\"gameRender\"])(GAME_MEMORY, ctx, WIDTH, HEIGHT);\n    },\n    end: function (fps) {\n        ctx.font = '10px Arial';\n        ctx.fillText(\"FPS: \" + fps, WIDTH - 50, HEIGHT - 50);\n    }\n});\nvar animate = function (elapsed) {\n    tick(elapsed);\n    requestAnimationFrame(animate);\n};\nrequestAnimationFrame(animate);\n_KeyboardInput__WEBPACK_IMPORTED_MODULE_1__[\"startListen\"]();\n_PointerInput__WEBPACK_IMPORTED_MODULE_0__[\"startListen\"]();\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+
+/***/ })
+
+/******/ });

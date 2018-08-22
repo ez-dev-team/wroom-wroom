@@ -1,13 +1,17 @@
-// TODO: setup tslint
 // TODO: no implicit any + more TS flags for super strict mode
-// TODO: split bundle for 2 files. Startup + game. Load game code via websockets?
 // TODO: add ability to record inputs + loop recorded state (how to clone game state? Deep copy?)
 
 import * as PointerInput from './PointerInput'
 import * as KeyboardInput from './KeyboardInput'
 import * as GamepadInput from './GamepadInput'
 import * as GameLoop from 'engine/GameLoop'
-import { GameController, IGameInput, gameUpdate, gameRender } from 'game/Game'
+import {
+	IGameInput,
+	IGameMemory,
+	IGameCode
+} from 'game/GameTypes'
+
+let loadGameCodeIsInProgress = false
 
 const PIXEL_RATIO = window.devicePixelRatio || 1
 const TARGET_MS_PER_FRAME = 1000 / 60
@@ -48,16 +52,19 @@ window.addEventListener('resize', () => {
 // 3. make some logo on the loading screen?
 // 4.
 
-// TODO: Game memory struct
-// TODO: Hot reloading for game code (websockets?)
+let GAME_CODE:IGameCode
+const GAME_MEMORY:IGameMemory = {} as IGameMemory
 const GAME_INPUT:IGameInput = {
-	controllers: [
-		new GameController()
-	]
+	controllers: []
 }
 
 function processKeyboardInputs() {
-	const keyboardController = GAME_INPUT.controllers[0]
+	let keyboardController = GAME_INPUT.controllers[0]
+	if (!keyboardController) {
+		keyboardController = GAME_CODE.createController()
+		GAME_INPUT.controllers[0] = keyboardController
+	}
+
 	keyboardController.moveLeft.pressed = KeyboardInput.isKeyPressed(KeyboardInput.KeyboardCodes.A)
 		|| KeyboardInput.isKeyPressed(KeyboardInput.KeyboardCodes.LEFT_ARROW)
 	keyboardController.moveRight.pressed = (KeyboardInput.isKeyPressed(KeyboardInput.KeyboardCodes.D)
@@ -83,7 +90,7 @@ function processGamepadInput() {
 		const controllerIndex = gamepadIndex + 1
 		let gamepadController = GAME_INPUT.controllers[controllerIndex] // NOTE: +1 because zero is for controller
 		if (!gamepadController) {
-			gamepadController = new GameController()
+			gamepadController = GAME_CODE.createController()
 			GAME_INPUT.controllers[controllerIndex] = gamepadController
 		}
 		// buttons = {pressed:boolean, value:number}[17].
@@ -107,18 +114,71 @@ function processGamepadInput() {
 	}
 }
 
+function loadJSCode<T>(url:string,
+	onLoad:(module:T) => void,
+	onError: (error:Error) => void):void {
+
+	const xhr = new XMLHttpRequest()
+	xhr.onreadystatechange = () => {
+		if (xhr.readyState === 4) {
+			if (xhr.status === 200 || xhr.status === 0) {
+				try {
+					const gameModule = eval(xhr.responseText)
+					onLoad(gameModule)
+				}
+				catch (e) {
+					onError(e)
+				}
+			} else {
+				onError(new Error(`XHR failed with code: ${xhr.status}`))
+			}
+		}
+	}
+	try {
+		xhr.open('GET', url, true)
+		xhr.send()
+	}
+	catch (e) {
+		onError(e)
+	}
+}
+
+function loadGameCode() {
+	if (loadGameCodeIsInProgress) {
+		return
+	}
+
+	loadGameCodeIsInProgress = true
+	loadJSCode<IGameCode>('/game.js', (module) => {
+		GAME_CODE = module
+		loadGameCodeIsInProgress = false
+	}, error => {
+		console.error('Load game code failed', error)
+		loadGameCodeIsInProgress = false
+	})
+}
+
+loadGameCode()
+
+// TODO: need to load GAME_CODE somehow before starting game.
+// Should be a stage in loading queue?
 const tick = GameLoop.createTickFunction({
 	start: () => {
-		processGamepadInput()
-		processKeyboardInputs()
-		gameUpdate(GAME_INPUT)
+		if (GAME_CODE) {
+			processGamepadInput()
+			processKeyboardInputs()
+			GAME_CODE.gameUpdate(GAME_MEMORY, GAME_INPUT)
+			loadGameCode() // try to load fresh bundle, dev mode only
+		}
 	},
 	update: () => {
 	},
 	// TODO: fix frame rate, join the update+render functions
 	render: () => {
-		ctx.clearRect(0, 0, WIDTH, HEIGHT)
-		gameRender(ctx, WIDTH, HEIGHT)
+		if (GAME_CODE) {
+			ctx.clearRect(0, 0, WIDTH, HEIGHT)
+			GAME_CODE.gameRender(GAME_MEMORY, ctx, WIDTH, HEIGHT)
+		}
 	},
 	end: (fps) => {
 		ctx.font = '10px Arial'

@@ -1,9 +1,13 @@
-const path = require('path');
+const path = require('path')
 
-// TODO: another entry for touch platform
+// TODO: change modes
 module.exports = {
-	entry: './src/index.ts',
-	devtool: 'inline-source-map',
+	mode: 'development',
+	entry: {
+		bundle: './src/index.ts',
+		game: './src/game/Game.ts',
+	},
+	devtool: 'eval',
 	module: {
 		rules: [
 			{
@@ -18,10 +22,12 @@ module.exports = {
 		extensions: [ '.tsx', '.ts', '.js' ]
 	},
 	devServer: {
-		contentBase: './dist'
+		contentBase: './dist',
+		inline: false
 	},
 	output: {
-		filename: 'bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	}
-};
+}
+
